@@ -29,4 +29,4 @@ class ActionView::Base
   include ActiveHelper
 end
 
-ActiveSupport::Dependencies.load_paths << Rails.root.join(*%w[app active_helpers]) if defined?(Rails)
+ActiveSupport::Dependencies.autoload_paths << Rails.root.join(*%w[app active_helpers]) if defined?(Rails)
